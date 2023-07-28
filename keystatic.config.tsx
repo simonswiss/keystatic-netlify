@@ -1,9 +1,13 @@
 // keystatic.config.tsx
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection } from '@keystatic/core'
 
 export default config({
   storage: {
-    kind: 'local',
+    kind: 'github',
+    repo: {
+      name: 'keystatic-netlify',
+      owner: 'simonswiss',
+    },
   },
   collections: {
     posts: collection({
@@ -23,4 +27,4 @@ export default config({
       },
     }),
   },
-});
+})
